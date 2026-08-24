@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Momen KKN/KKM — Gampong Meunasah Kulam</title>
+<meta name="description" content="Dokumentasi kegiatan mahasiswa KKN/KKM yang pernah bertugas di Gampong Meunasah Kulam, Kec. Meureudu, Kab. Pidie Jaya, Aceh.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/kkn.css">
+<noscript><style>body{opacity:1 !important;}</style></noscript>
+</head>
+<body>
+
+<!-- ============ SVG ICON LIBRARY ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="icon-chevron" viewBox="0 0 24 24">
+      <path d="M9 6 L15 12 L9 18" />
+    </symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24">
+      <path d="M6 6 L18 18 M18 6 L6 18" />
+    </symbol>
+    <symbol id="icon-photo" viewBox="0 0 48 48">
+      <rect x="6" y="10" width="36" height="28" rx="2" />
+      <circle cx="17" cy="20" r="3.5" />
+      <path d="M6 32 L17 23 L26 30 L34 22 L42 30" />
+    </symbol>
+    <symbol id="icon-arrow-left" viewBox="0 0 24 24">
+      <path d="M19 12 H5 M11 6 L5 12 L11 18" />
+    </symbol>
+    <symbol id="icon-people" viewBox="0 0 48 48">
+      <circle cx="17" cy="16" r="6" />
+      <circle cx="33" cy="16" r="6" />
+      <path d="M6 42 C6 33 11 28 17 28 C20 28 22.5 29.3 24.3 31.2" />
+      <path d="M42 42 C42 33 37 28 31 28 C28.6 28 26.4 28.9 24.6 30.4" />
+    </symbol>
+    <symbol id="icon-music" viewBox="0 0 24 24">
+      <path d="M9 18 V6 L20 4 V16" />
+      <circle cx="6.5" cy="18" r="2.5" />
+      <circle cx="17.5" cy="16" r="2.5" />
+    </symbol>
+    <symbol id="icon-music-off" viewBox="0 0 24 24">
+      <path d="M9 18 V6 L20 4 V16" />
+      <circle cx="6.5" cy="18" r="2.5" />
+      <circle cx="17.5" cy="16" r="2.5" />
+      <path d="M3 3 L21 21" />
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__brand">
+      <span class="nav__brand-mark">MK</span>
+      <span class="nav__brand-text">Meunasah&nbsp;Kulam</span>
+    </a>
+    <nav class="nav__links">
+      <a href="index.html#profil">Profil</a>
+      <a href="index.html#spotlight">Spotlight</a>
+      <a href="kkn.html" class="is-active">Momen KKN</a>
+      <a href="index.html#kontak">Kontak</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="kknHero">
+  <div class="hero__media">
+    <img class="hero__img" src="images/kkn/hero-kkn.jpg" alt="Momen KKN/KKM di Meunasah Kulam" onerror="this.style.display='none'; this.parentElement.classList.add('media--empty')">
+    <div class="hero__media-fallback">
+      <svg class="hero__media-icon"><use href="#icon-people"/></svg>
+      <span>images/kkn/hero-kkn.jpg</span>
+    </div>
+  </div>
+  <div class="hero__scrim"></div>
+  <div class="hero__frame" aria-hidden="true"></div>
+
+  <div class="hero__content">
+    <a href="index.html" class="kkn-hero__back">
+      <svg><use href="#icon-arrow-left"/></svg>
+      Kembali ke Beranda
+    </a>
+    <p class="eyebrow eyebrow--light">Dokumentasi &amp; Kenangan</p>
+    <h1 class="hero__title">Momen KKN<br>&amp; KKM</h1>
+    <p class="hero__tagline">
+      Sepenggal jejak dari mahasiswa yang pernah tinggal, belajar, dan mengabdi
+      bersama warga Gampong Meunasah Kulam.
+    </p>
+  </div>
+</section>
+
+<!-- ============ MOMENTS GRID ============ -->
+<section class="moments" id="moments">
+  <div class="moments__grid" id="momentsGrid"></div>
+</section>
+
+<!-- ============ MODAL ============ -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal__backdrop" id="modalBackdrop"></div>
+  <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal__close" id="modalClose" aria-label="Tutup">
+      <svg><use href="#icon-close"/></svg>
+    </button>
+
+    <div class="modal__gallery">
+      <div class="modal__gallery-track" id="modalGalleryTrack"></div>
+      <button class="modal__nav modal__nav--prev" id="galPrev" aria-label="Foto sebelumnya">
+        <svg style="transform:rotate(180deg)"><use href="#icon-chevron"/></svg>
+      </button>
+      <button class="modal__nav modal__nav--next" id="galNext" aria-label="Foto berikutnya">
+        <svg><use href="#icon-chevron"/></svg>
+      </button>
+      <div class="modal__dots" id="galDots"></div>
+    </div>
+
+    <div class="modal__body">
+      <p class="eyebrow" id="modalEyebrow">Momen</p>
+      <h3 class="modal__title" id="modalTitle"></h3>
+      <p class="modal__story" id="modalStory"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MUSIK LATAR ============ -->
+<audio id="bgMusic" src="audio/kkn-theme.mp3" loop preload="none"></audio>
+<button class="music-toggle" id="musicToggle" aria-label="Putar atau jeda musik" aria-pressed="false">
+  <svg class="music-toggle__icon music-toggle__icon--on"><use href="#icon-music"/></svg>
+  <svg class="music-toggle__icon music-toggle__icon--off"><use href="#icon-music-off"/></svg>
+  <span class="music-toggle__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+</button>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <span>&copy; <span id="year"></span> Gampong Meunasah Kulam</span>
+    <span class="footer__sub">Kec. Meureudu &middot; Kab. Pidie Jaya &middot; Aceh</span>
+  </div>
+</footer>
+
+<script src="js/kkn.js"></script>
+<script src="js/music.js"></script>
+<script src="js/transitions.js"></script>
+</body>
+</html>

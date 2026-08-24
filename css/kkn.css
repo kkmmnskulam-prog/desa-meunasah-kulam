@@ -1,0 +1,155 @@
+/* ==========================================================================
+   MOMEN KKN/KKM — page-specific styles
+   Extends css/style.css (shared tokens, nav, modal, footer).
+   ========================================================================== */
+
+.nav__links a.is-active { color: var(--gold-light); }
+
+/* ---- page hero (shorter than homepage hero, no photo) ---- */
+.kkn-hero {
+  position: relative;
+  padding: calc(var(--nav-h) + 90px) 28px 80px;
+  background:
+    radial-gradient(circle at 85% 0%, rgba(200,155,60,0.16), transparent 55%),
+    linear-gradient(165deg, var(--forest-deep), #0E241D 85%);
+  color: var(--white);
+}
+.kkn-hero__inner {
+  max-width: var(--container);
+  margin: 0 auto;
+}
+.kkn-hero__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: rgba(242, 236, 218, 0.65);
+  margin-bottom: 32px;
+  transition: color 0.2s ease;
+}
+.kkn-hero__back svg { width: 16px; height: 16px; }
+.kkn-hero__back:hover { color: var(--gold-light); }
+
+.kkn-hero__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.4rem, 5.5vw, 4rem);
+  line-height: 1.08;
+  margin: 0 0 20px;
+}
+.kkn-hero__tagline {
+  max-width: 560px;
+  font-size: 1.04rem;
+  line-height: 1.7;
+  color: rgba(242, 236, 218, 0.8);
+  margin: 0;
+}
+
+/* ---- moments grid ---- */
+.moments { padding: 70px 28px 130px; background: var(--parchment); }
+.moments__grid {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.moment-card {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--forest-deep);
+  cursor: pointer;
+  aspect-ratio: 4 / 3.2;
+  transition: transform 0.35s ease;
+}
+.moment-card:hover { transform: translateY(-4px); }
+.moment-card--video { cursor: default; }
+.moment-card--video:hover { transform: none; }
+
+.moment-card__media { position: absolute; inset: 0; }
+.moment-card__img,
+video.moment-card__img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+.moment-card:hover .moment-card__img { transform: scale(1.05); }
+
+/* Foto momen-2 memiliki komposisi yang perlu terlihat utuh pada kartu. */
+.moment-card[data-id="momen-2"] .moment-card__img { object-fit: contain; }
+.moment-card[data-id="momen-2"]:hover .moment-card__img { transform: none; }
+.moment-card__fallback {
+  position: absolute; inset: 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: radial-gradient(circle at 70% 20%, rgba(200,155,60,0.16), transparent 55%), var(--forest-deep);
+  color: var(--gold-light);
+}
+.moment-card__media.media--empty .moment-card__fallback { display: flex; }
+.moment-card__fallback svg { width: 36px; height: 36px; opacity: 0.7; }
+.moment-card__fallback span {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.04em;
+  color: rgba(227, 200, 120, 0.55);
+  text-align: center;
+  padding: 0 12px;
+}
+
+.moment-card__scrim {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(14,25,20,0.92) 0%, rgba(14,25,20,0.1) 55%, rgba(14,25,20,0) 72%);
+}
+
+.moment-card__gallery-tag {
+  position: absolute;
+  top: 14px; right: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: rgba(20, 51, 42, 0.55);
+  border: 1px solid rgba(227, 200, 120, 0.4);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  color: var(--gold-light);
+  backdrop-filter: blur(4px);
+}
+.moment-card__gallery-tag svg { width: 12px; height: 12px; }
+
+.moment-card__body {
+  position: absolute;
+  left: 18px; right: 18px; bottom: 16px;
+  color: var(--white);
+}
+.moment-card__date {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  color: var(--gold-light);
+  letter-spacing: 0.06em;
+  margin: 0 0 6px;
+}
+.moment-card__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0;
+  line-height: 1.2;
+}
+.moment-card--video .moment-card__date { display: none; }
+
+@media (max-width: 860px) {
+  .moments__grid { grid-template-columns: repeat(2, 1fr); }
+  .moments { padding: 50px 22px 96px; }
+  .kkn-hero { padding: calc(var(--nav-h) + 60px) 22px 60px; }
+}
+
+@media (max-width: 520px) {
+  .moments__grid { grid-template-columns: 1fr; }
+}
+
+/* Tombol musik (.music-toggle) sekarang ada di css/style.css supaya
+   bisa dipakai bersama di halaman utama maupun halaman ini. */
