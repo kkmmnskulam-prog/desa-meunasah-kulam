@@ -82,6 +82,39 @@ const MOMENTS = [
       "images/kkn/momen-4d.jpeg",
       "images/kkn/momen-4e.jpeg"
     ]
+  },
+  {
+    id: "momen-video-4",
+    period: "Proker Kelompok KKM",
+    title: "Lomba Bersama Siswa SDN 10 Meureudu",
+    caption: "Dokumentasi kegiatan lomba yang diselenggarakan oleh kelompok KKM sebagai bagian dari program kerja.",
+    story: "Video ini mengabadikan kegiatan lomba yang diselenggarakan oleh kelompok KKM bersama para siswa SDN 10 Meureudu. Kegiatan ini menjadi momen penuh semangat dan keceriaan, sekaligus pengalaman berharga bagi kami dalam menjalankan proker dan membangun kebersamaan bersama para siswa.",
+    images: ["images/kkn/momen-4-video.mp4"]
+  },
+  {
+    id: "momen-video-3",
+    period: "25 Agustus 2026",
+    title: "Momen Dua Hari Sebelum KKM Selesai",
+    caption: "Momen kelompok KKM pada 25 Agustus 2026, dua hari sebelum kegiatan KKM selesai.",
+    story: "Pada 25 Agustus 2026, dua hari sebelum kegiatan KKM selesai, kelompok KKM mengabadikan salah satu momen kebersamaan selama berada di Meunasah Kulam. Video ini menjadi kenangan menjelang berakhirnya masa pengabdian kami.",
+    images: ["images/kkn/momen-3-video.mp4"]
+  },
+  {
+    id: "momen-5",
+    period: "Proker Kelompok KKM",
+    title: "Lomba dan Pembagian Hadiah di SDN 10 Meureudu",
+    caption: "Salah satu pengalaman berharga kelompok KKM: melihat semangat, keceriaan, dan senyum para siswa dalam kegiatan lomba dan pembagian hadiah.",
+    story: "Kegiatan lomba dan pembagian hadiah di SDN 10 Meureudu menjadi salah satu pengalaman paling berharga bagi kelompok KKM selama menjalankan program kerja. Melihat para siswa mengikuti setiap perlombaan dengan penuh semangat, tawa, dan keceriaan membuat suasana hari itu terasa begitu istimewa. Setiap hadiah yang diberikan bukan hanya menjadi bentuk apresiasi, tetapi juga menyimpan kenangan tentang kebersamaan, perjuangan, dan kebahagiaan yang kami bagikan bersama. Momen sederhana ini akan selalu kami ingat sebagai bagian indah dari perjalanan KKM, karena melalui kegiatan tersebut kami belajar bahwa kebahagiaan anak-anak dan hubungan yang terjalin dengan mereka adalah hadiah terbesar selama kami mengabdi.",
+    images: [
+      "images/kkn/momen-5a.jpeg",
+      "images/kkn/momen-5b.jpeg",
+      "images/kkn/momen-5c.jpeg",
+      "images/kkn/momen-5d.jpeg",
+      "images/kkn/momen-5e.jpeg",
+      "images/kkn/momen-5f.jpeg",
+      "images/kkn/momen-5g.jpeg",
+      "images/kkn/momen-5h.jpeg"
+    ]
   }
 
   /* ---------------------------------------------------------------------
